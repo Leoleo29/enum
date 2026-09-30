@@ -11,8 +11,8 @@ int WINAPI WinMain(_In_ HINSTANCE, _In_opt_ HINSTANCE, _In_ LPSTR, _In_ int)
 
 	struct Vector2
 	{
-		float  x;
-		float  y;
+		int  x;
+		int  y;
 	};
 
 	struct Ball
@@ -98,7 +98,7 @@ int WINAPI WinMain(_In_ HINSTANCE, _In_opt_ HINSTANCE, _In_ LPSTR, _In_ int)
 		
 		if (keys[DIK_SPACE] != 0 && preKeys[DIK_SPACE] == 0)
 		{
-			ball.currentPosition -= speed;
+			ball.currentPosition = ball.velocity;
 		}
 
 		/// ↑更新処理ここまで
@@ -124,7 +124,7 @@ int WINAPI WinMain(_In_ HINSTANCE, _In_opt_ HINSTANCE, _In_ LPSTR, _In_ int)
 			}
 		}
 
-		Novice::DrawEllipse(currentPlayerX, currentPlayerY, playerRadius, playerRadius, 0.0f, RED, kFillModeSolid);
+		Novice::DrawEllipse(ball.currentPosition, ball.currentPlayerY, playerRadius, playerRadius, 0.0f, RED, kFillModeSolid);
 
 		Novice::ScreenPrintf(0, 810, "current map: map[%d][%d] = 0", currentPlayerY / kMapSize, currentPlayerX / kMapSize);
 
