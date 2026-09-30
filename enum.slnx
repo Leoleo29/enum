@@ -1,0 +1,9 @@
+<Solution>
+  <Configurations>
+    <BuildType Name="Debug" />
+    <BuildType Name="Develop" />
+    <BuildType Name="Release" />
+    <Platform Name="x64" />
+  </Configurations>
+  <Project Path="enum.vcxproj" Id="eb6b3a45-fe0e-47e6-8719-01ad3d4d9e1e" />
+</Solution>
